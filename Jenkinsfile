@@ -37,11 +37,11 @@ pipeline {
                 withCredentials([string(credentialsId: 'SONARCLOUD_TOKEN', variable: 'SONAR_TOKEN')]) {
                     bat '''
                         npm install -g sonarqube-scanner
-                        sonar-scanner \
-                          -Dsonar.projectKey=8-2CDevSecOps \
-                          -Dsonar.organization=taoterry \
-                          -Dsonar.sources=. \
-                          -Dsonar.host.url=https://sonarcloud.io \
+                        sonar-scanner ^
+                          -Dsonar.projectKey=8-2CDevSecOps ^
+                          -Dsonar.organization=taoterry ^
+                          -Dsonar.sources=. ^
+                          -Dsonar.host.url=https://sonarcloud.io ^
                           -Dsonar.login=$SONAR_TOKEN
                     '''
                 }
