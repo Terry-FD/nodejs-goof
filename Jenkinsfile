@@ -9,22 +9,22 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
         stage('Generate coverage report') {
             steps {
-                sh 'npm run coverage'
+                bat 'npm run coverage'
             }
         }
         stage('Run audit scan') {
             steps {
-                sh 'npm audit'
+                bat 'npm audit'
             }
         }
     }
