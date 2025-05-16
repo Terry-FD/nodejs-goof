@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                bat 'git clone https://github.com/Terry-FD/8.2CDevSecOps.git'
+                bat 'git clone https://github.com/Terry-FD/nodejs-goof.git'
             }
         }
 
